@@ -25,7 +25,7 @@ public class wiki {
 			o.addArguments("--headless");
 			
 			DesiredCapabilities des = new DesiredCapabilities();
-			des.
+		
 			
 			WebDriver driver = new ChromeDriver();
 			
@@ -58,10 +58,12 @@ public class wiki {
 		      
 			}
 				
-		for (int k = 1; k <=rsize; k++) {
-			WebElement ele = driver.findElement(By.xpath("//table[@class='wikitable sortable jquery-tablesorter']//tr["+k+"]//td["+cvalue+"]"));
+		for (int k = 1; k <=csize; k++) {
+			WebElement ele = driver.findElement(By.xpath("//table[@class='wikitable sortable jquery-tablesorter']//tr["+rvalue+"]//td["+(csize-2)+"]"));
 		String text = ele.getText();
 		System.out.println(text);
+		break;
+		
 		}
 			
 			
